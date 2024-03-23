@@ -1,0 +1,56 @@
+.search-bar {
+    border: 2px solid #6F5F79;
+    border-radius: 9px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 3px 5px;
+    height: 32px;
+
+    margin: 10px; /* для проверки, потом убрать*/
+}
+
+.nonDefault {
+    flex-direction: row-reverse;
+}
+
+
+
+.search-bar svg{
+    cursor: pointer;    
+}
+
+.search-bar input::placeholder {
+    color: #6F5F79;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    padding: 0;
+    outline: none;
+}
+
+.search-bar .search-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.search-bar .close-icon {
+
+    display: flex;
+    align-content: center center;
+}
+
+.search-bar .filter-icon {
+    display: flex;
+    align-content: center center;
+}
+
+.search-bar .filter-icon-left {
+    display: flex;
+    align-content: center center;
+    order: -1;
+}
