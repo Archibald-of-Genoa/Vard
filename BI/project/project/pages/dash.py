@@ -4,9 +4,22 @@ import plotly.subplots as sp
 from mysql_conn import *
 import pandas
 
-# set page
+from menu import unauthenticated_menu
 
 st.set_page_config(page_title="Аналитический сервис VARD", layout="wide")
+
+if 'loggedIn' not in st.session_state:
+    st.warning("You do not have permission to view this page.")
+    st.stop()
+
+
+def LoggedOut_Clicked():
+    st.session_state['loggedIn'] = False
+    unauthenticated_menu()
+
+
+st.button("Log Out", key="logout", on_click=LoggedOut_Clicked)
+
 st.subheader("VARD-BI")
 
 result = view_all_data()
